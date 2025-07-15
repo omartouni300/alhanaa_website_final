@@ -1,0 +1,802 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--^======= Favicons ======= -->
+    <link href="{% static 'images/Logo.webp.webp' %}" rel="icon" />
+    <link href="{% static 'imgs/apple-touch-icon.webp' %}" rel="apple-touch-icon" />
+    
+    <!--^======= Vendor CSS Files ======= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <!--^======= Main CSS File ======= -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
+    <title>Products-ALHANAA</title>
+</head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+    <!-- ?======================= START NAVBAR ====================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg  navbar-dark fixed-top">
+
+        <div class="container ">
+<a class="navbar-brand logo"  href="{% url 'index' %}">
+  <img id="main-logo"
+       src="{% static 'images/ALHANAA_Logo_Clean.webp' %}"
+       alt="AL HANAA Logo"
+       style="max-height: 70px;" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars nav-icon btn__menu__open"></i>
+                <i class="fa-solid fa-xmark nav-icon btn__menu__close"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item ">
+    <a class="nav-link p-0" href="{% url 'index' %}" target="_self">Home</a>
+                    </li>
+                                        <li class="nav-item">
+    <a class="nav-link p-0" aria-current="page"  href="{% url 'about' %}">About Us</a>
+</li>
+                    <li class="nav-item">
+    <a class="nav-link p-0 active" href="{% url 'products' %}" target="_self">Products</a>
+</li>
+
+
+<li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'certificates' %}" target="_self">certificates</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'contact' %}" target="_self">Contact Us</a>
+</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- ?======================= START Products ====================== -->
+  <section class="products">
+    <div class="bgOfPage  d-flex align-items-center justify-content-center">
+     <h2>Products  </h2> 
+   </div> 
+   <div class="container mt-5">
+    <div class="my-accordin mt-5 mb-5">
+      <!--<h2>Our Products</h2>-->
+ 
+<div class="accordion my-4" id="accordionAvailability">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingAvailability">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAvailability" aria-expanded="true" aria-controls="collapseAvailability">
+        Availability Chart
+      </button>
+    </h2>
+    <div id="collapseAvailability" class="accordion-collapse collapse show" aria-labelledby="headingAvailability">
+      <div class="accordion-body">
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle text-center availability-table">
+            <thead class="table-success">
+              <tr>
+                <th>Product</th>
+                <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th>
+                <th>May</th><th>Jun</th><th>Jul</th><th>Aug</th>
+                <th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pineapple</td>
+                <td data-label="Jan"><img src="{% static 'images/orange_11974688.webp' %}" alt="Pineapple" class="fruit-img"></td>
+                <td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td>
+                <td data-label="May"></td><td data-label="Jun"></td><td data-label="Jul"></td><td data-label="Aug"></td>
+                <td data-label="Sep"></td><td data-label="Oct"></td><td data-label="Nov"></td>
+                <td data-label="Dec"><img src="{% static 'images/orange_11974688.webp' %}" alt="Pineapple" class="fruit-img"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Fremont</td>
+                <td data-label="Jan"><img src="{% static 'images/mandarin_1704398.webp' %}" alt="Fremont" class="fruit-img"></td>
+                <td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td>
+                <td data-label="May"></td><td data-label="Jun"></td><td data-label="Jul"></td><td data-label="Aug"></td>
+                <td data-label="Sep"></td><td data-label="Oct"></td><td data-label="Nov"></td>
+                <td data-label="Dec"><img src="{% static 'images/mandarin_1704398.webp' %}" alt="Fremont" class="fruit-img"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Grapefruit</td>
+                <td data-label="Jan"><img src="{% static 'images/grapefruit_3523482.webp' %}" alt="Grapefruit" class="fruit-img"></td>
+                <td data-label="Feb"><img src="{% static 'images/grapefruit_3523482.webp' %}" alt="Grapefruit" class="fruit-img"></td>
+                <td data-label="Mar"></td><td data-label="Apr"></td><td data-label="May"></td><td data-label="Jun"></td>
+                <td data-label="Jul"></td><td data-label="Aug"></td><td data-label="Sep"></td><td data-label="Oct"></td>
+                <td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Early Sweet Grapes</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td>
+                <td data-label="May"><img src="{% static 'images/grapes_image_1-removebg-preview.webp' %}" alt="Early Sweet" class="fruit-img"></td>
+                <td data-label="Jun"><img src="{% static 'images/grapes_image_1-removebg-preview.webp' %}" alt="Early Sweet" class="fruit-img"></td>
+                <td data-label="Jul"></td><td data-label="Aug"></td><td data-label="Sep"></td><td data-label="Oct"></td>
+                <td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Flame Grapes</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td>
+                <td data-label="May"><img src="{% static 'images/grapes_image_2-removebg-preview.webp' %}" alt="Flame" class="fruit-img"></td>
+                <td data-label="Jun"><img src="{% static 'images/grapes_image_2-removebg-preview.webp' %}" alt="Flame" class="fruit-img"></td>
+                <td data-label="Jul"></td><td data-label="Aug"></td><td data-label="Sep"></td><td data-label="Oct"></td>
+                <td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Thompson Grapes</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td><td data-label="May"></td><td data-label="Jun"></td>
+                <td data-label="Jul"><img src="{% static 'images/grapes_image_3-removebg-preview.webp' %}" alt="Thompson" class="fruit-img"></td>
+                <td data-label="Aug"></td><td data-label="Sep"></td><td data-label="Oct"></td><td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Barhi Dates</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td><td data-label="May"></td><td data-label="Jun"></td>
+                <td data-label="Jul"></td>
+                <td data-label="Aug"><img src="{% static 'images/golden-date-fruit-icon-isometric-food-palm-vector-removebg-preview.webp' %}" alt="Barhi" class="fruit-img"></td>
+                <td data-label="Sep"></td><td data-label="Oct"></td><td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+              <tr>
+                <td>Medjool Dates</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td><td data-label="May"></td><td data-label="Jun"></td>
+                <td data-label="Jul"></td><td data-label="Aug"></td>
+                <td data-label="Sep"><img src="{% static 'images/datess.webp' %}" alt="Medjool" class="fruit-img"></td>
+                <td data-label="Oct"></td><td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+              
+              <tr>
+                <td>Olives</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td><td data-label="May"></td><td data-label="Jun"></td>
+                <td data-label="Jul"></td><td data-label="Aug"><img src="{% static 'images/olive icon chart.webp' %}" alt="Medjool" class="fruit-img"></td>
+                <td data-label="Sep"></td>
+                <td data-label="Oct"></td><td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+
+                <tr>
+                <td>Prickly Pear</td>
+                <td data-label="Jan"></td><td data-label="Feb"></td><td data-label="Mar"></td><td data-label="Apr"></td><td data-label="May"></td><td data-label="Jun"></td>
+                <td data-label="Jul"><img src="{% static 'images/Prickly Pear icon.webp' %}" alt="Thompson" class="fruit-img"></td>
+                <td data-label="Aug"></td><td data-label="Sep"></td><td data-label="Oct"></td><td data-label="Nov"></td><td data-label="Dec"></td>
+                <td data-label="Status"><span class="badge bg-success">Available</span></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--<div class="Ornage " id="orang">
+    <div class="my-accordin mt-5 mb-5">
+      <h1>Orange</h1>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+
+        <button class="accordion-button collapsed accordion-btn-bg ornage-accbtn" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          Pineapple Orange
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+Pineapple Orange is a premium citrus variety distinguished by its vibrant color, naturally sweet flavor, and high juice content. Known for its subtle tropical aroma, it is easy to peel and ideal for both fresh consumption and juice production. Typically harvested in the mid to late citrus season, Pineapple Orange is widely appreciated for its quality and flavor.        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Grapefruit" id="grapefruit">
+  <div class="my-accordin mt-5 mb-5">
+    <h1>Grapefruit</h1>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingGrapefruit">
+      <button class="accordion-button collapsed accordion-btn-bg grapefruit-accbtn" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseGrapefruit" aria-expanded="false" aria-controls="panelsStayOpen-collapseGrapefruit">
+        Grapefruit
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseGrapefruit" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingGrapefruit">
+      <div class="accordion-body">
+        Grapefruit is a large citrus fruit known for its juicy texture and bold, tangy-sweet flavor. Typically round with a thick, yellow to pinkish-red rind, it contains segmented flesh that ranges in color from pale yellow to deep ruby. High in vitamin C and refreshing in taste, is mostly consumed fresh, juiced, or as a zesty addition to salads and dishes.
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="Mandarin mind-accbtn " id="mandarin">
+      <div class="my-accordin mt-5 mb-5">
+        <h1>Mandarin</h1>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Fremont Mandarin
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Fremont Mandarin is a seedless or low-seeded variety known for its vibrant flavor and visual appeal. It offers a balanced sweetness with mild acidity, making it especially enjoyable for fresh consumption. Harvested early in the citrus season, Fremont stands out for its excellent shelf life and consistent consumer demand.</div>
+        </div>
+      </div>
+    </div>
+    <div class="Grapes grape-accbtn " id="grapes">
+      <div class="my-accordin mt-5 mb-5">
+        <h1>Grapes</h1>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Early Sweet Grapes
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+Early Sweet grapes celebrates as one of the first grapes of the season, it offers a crisp texture and naturally high sugar content. Its pale green color and seedless convenience makes it a market favorite. The early harvest window makes it one of the strong competitive fruit varieties in global markets.            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed flame-accbtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+             Red Flame
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+Red Flame grapes are a widely recognized seedless variety, typically medium to large in size with a round to slightly oval shape. As they mature, their skin develops a vibrant red to purplish-red color, deepening as ripeness progresses. With their crisp texture and striking appearance.            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Thompson Grapes
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+Thompson Seedless grape is a well-known green grape variety, valued for its smooth skin, crisp bite, and naturally sweet flavor. The berries are oval in shape and completely seedless, offering a clean and refreshing eating experience. This variety is also commonly used for fresh eating, drying into raisins and concentration thanks to its balanced sugar content and firm texture.            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="Dates" id="dates">
+  <div class="my-accordin mt-5 mb-5">
+    <h1>Dates</h1>
+  </div>
+  <div class="accordion" id="accordionDatesExample">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingBarhi">
+        <button class="accordion-button collapsed dates-accbtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarhi" aria-expanded="false" aria-controls="collapseBarhi">
+          Barhi Dates
+        </button>
+      </h2>
+      <div id="collapseBarhi" class="accordion-collapse collapse" aria-labelledby="headingBarhi" data-bs-parent="#accordionDatesExample">
+        <div class="accordion-body">
+Fresh Barhi dates are a truly unique variety, known for their round shape, golden-yellow creamy skin, and crisp, apple-like texture. Eaten at the khalal stage, they offer a sweet yet slightly astringent flavor, reminiscent of fresh sugarcane. Their refreshing bite and seasonal nature make them a distinctive choice among fresh fruits.        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingMedjool">
+        <button class="accordion-button collapsed madjool-accbtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedjool" aria-expanded="false" aria-controls="collapseMedjool">
+          Medjool Dates
+        </button>
+      </h2>
+      <div id="collapseMedjool" class="accordion-collapse collapse" aria-labelledby="headingMedjool" data-bs-parent="#accordionDatesExample">
+        <div class="accordion-body">
+Medjool dates, known as the king of dates is a premium variety prized for its impressive size, rich flavor, and naturally soft texture. This semi-dried fruit features a large, oval shape with dark brown to reddish-brown skin that is glossy yet gently wrinkled. Inside, it holds a single elongated pit surrounded by thick, fleshy flesh. Medjool dates are not only delicious but also packed with nutritional benefits—high in fiber, potassium, and natural sugars that provide a clean source of energy        </div>
+      </div>
+    </div>
+-->
+  </div>
+</div>
+
+  </div>  
+
+<!-- Test -->
+<!-- ====== START: Filterable Product List ====== -->
+ 
+  <div class="container">
+    <div class="row">
+<div class="row" id="productList">
+<!-- Filter Tabs -->
+<div class="product-dropdown">
+  <select id="productFilter">
+    <option value="all">All Products</option>
+    <option value="citrus">Citrus</option>
+    <option value="grapes">Grapes</option>
+    <option value="dates">Dates</option>
+    <option value="Prickly Pear">Prickly Pear</option>
+    <option value="Olives">Olives</option>
+  </select>
+</div>
+
+
+
+<!--<ul class="nav nav-pills justify-content-center mb-4" id="productFilter">
+  <li class="nav-item">
+    <button class="nav-link active" data-filter="all">All</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-filter="citrus">Citrus</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-filter="grapes">Grapes</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-filter="dates">Dates</button>
+  </li>
+</ul>-->
+
+  <!-- Pineapple Orange -->
+  
+   
+  <div class="col-md-6 col-12 product-card citrus" id="pineapple">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Pineapple Orange</h5>
+        <div class="leaf-shape"><img src="/static/images/Orange icon.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+       Pineapple Orange is a premium citrus variety distinguished by its vibrant color, naturally sweet flavor, and high juice content. Known for its subtle tropical aroma, it is easy to peel and ideal for both fresh consumption and juice production. Typically harvested in the mid to late citrus season, Pineapple Orange is widely appreciated for its quality and flavor.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Pineapple</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-success">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-secondary">May</span>
+          <span class="badge bg-secondary">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-success">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grapefruit -->
+  <div class="col-md-6 col-12 product-card citrus" id="grapefruit">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Grapefruit</h5>
+        <div class="leaf-shape"><img src="/static/images/grapefruit icon.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+        Grapefruit is a large citrus fruit known for its juicy texture and bold, tangy-sweet flavor. Typically round with a thick, yellow to pinkish-red rind, it contains segmented flesh that ranges in color from pale yellow to deep ruby. High in vitamin C and refreshing in taste, is mostly consumed fresh, juiced, or as a zesty addition to salads and dishes.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Grapefruit</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-success">Jan</span>
+          <span class="badge bg-success">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-secondary">May</span>
+          <span class="badge bg-secondary">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-secondary">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fremont Mandarin -->
+  <div class="col-md-6 col-12 product-card citrus" id="fremont">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Fremont Mandarin</h5>
+        <div class="leaf-shape"><img src="/static/images/Fermont icon.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+       Fremont Mandarin is a seedless or low-seeded variety known for its vibrant flavor and visual appeal. It offers a balanced sweetness with mild acidity, making it especially enjoyable for fresh consumption. Harvested early in the citrus season, Fremont stands out for its excellent shelf life and consistent consumer demand.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Fremont</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-success">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-secondary">May</span>
+          <span class="badge bg-secondary">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-success">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Early Sweet Grapes -->
+  <div class="col-md-6 col-12 product-card grapes" id="earlysweat">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Early Sweat Grapes</h5>
+        <div class="leaf-shape"><img src="/static/images/Early sweat.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+        Early Sweet grapes celebrates as one of the first grapes of the season, it offers a crisp texture and naturally high sugar content. Its pale green color and seedless convenience makes it a market favorite. The early harvest window makes it one of the strong competitive fruit varieties in global markets.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Early Sweet</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-secondary">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-success">May</span>
+          <span class="badge bg-success">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-secondary">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thompson Grapes -->
+  <div class="col-md-6 col-12 product-card grapes" id="thomson">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Thompson Grapes</h5>
+        <div class="leaf-shape"><img src="/static/images/banti icon.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+        Thompson Seedless grape is a well-known green grape variety, valued for its smooth skin, crisp bite, and naturally sweet flavor. The berries are oval in shape and completely seedless, offering a clean and refreshing eating experience. This variety is also commonly used for fresh eating, drying into raisins and concentration thanks to its balanced sugar content and firm texture.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Thompson</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-secondary">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-secondary">May</span>
+          <span class="badge bg-secondary">Jun</span>
+          <span class="badge bg-success">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-secondary">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Red Flame Grapes -->
+  <div class="col-md-6 col-12 product-card grapes" id="flame">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Red Flame Grapes</h5>
+        <div class="leaf-shape"><img src="/static/images/flame icon.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+        Red Flame grapes are a widely recognized seedless variety, typically medium to large in size with a round to slightly oval shape. As they mature, their skin develops a vibrant red to purplish-red color, deepening as ripeness progresses. With their crisp texture and striking appearance.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Red Flame</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-secondary">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-success">May</span>
+          <span class="badge bg-success">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-secondary">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barhi Dates -->
+  <div class="col-md-6 col-12 product-card dates" id="barhi">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Barhi Dates</h5>
+        <div class="leaf-shape"><img src="/static/images/Barhi icon.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+        Fresh Barhi dates are a truly unique variety, known for their round shape, golden-yellow creamy skin, and crisp, apple-like texture. Eaten at the khalal stage, they offer a sweet yet slightly astringent flavor, reminiscent of fresh sugarcane. Their refreshing bite and seasonal nature make them a distinctive choice among fresh fruits.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Barhi</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-secondary">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-secondary">May</span>
+          <span class="badge bg-secondary">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-success">Aug</span>
+          <span class="badge bg-secondary">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-secondary">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medjool Dates -->
+  <div class="col-md-6 col-12 product-card dates" id="medjool">
+    <div class="product-inner">
+      <div class="product-header">
+        <h5 class="product-title">Medjool Dates</h5>
+        <div class="leaf-shape"><img src="/static/images/medjool dates.webp" alt=""></div>
+      </div>
+      <p class="product-desc">
+        Medjool dates, known as the king of dates is a premium variety prized for its impressive size, rich flavor, and naturally soft texture. This semi-dried fruit features a large, oval shape with dark brown to reddish-brown skin that is glossy yet gently wrinkled. Inside, it holds a single elongated pit surrounded by thick, fleshy flesh. Medjool dates are not only delicious but also packed with nutritional benefits—high in fiber, potassium, and natural sugars that provide a clean source of energy.
+      </p>
+      <div class="product-timeline mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <strong class="me-2">Medjool</strong>
+          <span class="badge bg-success">Available</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-secondary">Jan</span>
+          <span class="badge bg-secondary">Feb</span>
+          <span class="badge bg-secondary">Mar</span>
+          <span class="badge bg-secondary">Apr</span>
+          <span class="badge bg-secondary">May</span>
+          <span class="badge bg-secondary">Jun</span>
+          <span class="badge bg-secondary">Jul</span>
+          <span class="badge bg-secondary">Aug</span>
+          <span class="badge bg-success">Sep</span>
+          <span class="badge bg-secondary">Oct</span>
+          <span class="badge bg-secondary">Nov</span>
+          <span class="badge bg-secondary">Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prickly Pear -->
+<div class="col-md-6 col-12 product-card Prickly Pear" id="prickly-pear">
+  <div class="product-inner">
+    <div class="product-header">
+      <h5 class="product-title">Prickly Pear</h5>
+      <div class="leaf-shape"><img src="/static/images/prickly-icon.webp" alt=""></div>
+    </div>
+    <p class="product-desc">
+      Prickly Pear is a cactus fruit recognized for its oval shape, vibrant skin color ranging from green to deep red, and refreshingly sweet taste. Rich in antioxidants and hydration properties.
+    </p>
+    <div class="product-timeline mb-3">
+      <div class="d-flex align-items-center mb-2">
+        <strong class="me-2">Prickly Pear</strong>
+        <span class="badge bg-success">Available</span>
+      </div>
+      <div class="d-flex flex-wrap gap-1">
+        <span class="badge bg-secondary">Jan</span>
+        <span class="badge bg-secondary">Feb</span>
+        <span class="badge bg-secondary">Mar</span>
+        <span class="badge bg-secondary">Apr</span>
+        <span class="badge bg-secondary">May</span>
+        <span class="badge bg-secondary">Jun</span>
+        <span class="badge bg-success">Jul</span>
+        <span class="badge bg-secondary">Aug</span>
+        <span class="badge bg-secondary">Sep</span>
+        <span class="badge bg-secondary">Oct</span>
+        <span class="badge bg-secondary">Nov</span>
+        <span class="badge bg-secondary">Dec</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Olives -->
+<div class="col-md-6 col-12 product-card Olives" id="olives">
+  <div class="product-inner">
+    <div class="product-header">
+      <h5 class="product-title">Olives</h5>
+      <div class="leaf-shape"><img src="/static/images/olive-icon.webp" alt=""></div>
+    </div>
+    <p class="product-desc">
+      Olives are one of the most versatile Mediterranean fruits. Known for their rich flavor and oil content, they are harvested at different stages for green and black types.
+    </p>
+    <div class="product-timeline mb-3">
+      <div class="d-flex align-items-center mb-2">
+        <strong class="me-2">Olives</strong>
+        <span class="badge bg-success">Available</span>
+      </div>
+      <div class="d-flex flex-wrap gap-1">
+        <span class="badge bg-secondary">Jan</span>
+        <span class="badge bg-secondary">Feb</span>
+        <span class="badge bg-secondary">Mar</span>
+        <span class="badge bg-secondary">Apr</span>
+        <span class="badge bg-secondary">May</span>
+        <span class="badge bg-secondary">Jun</span>
+        <span class="badge bg-secondary">Jul</span>
+        <span class="badge bg-success">Aug</span>
+        <span class="badge bg-secondary">Sep</span>
+        <span class="badge bg-secondary">Oct</span>
+        <span class="badge bg-secondary">Nov</span>
+        <span class="badge bg-secondary">Dec</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+   
+    </div>
+   </div>
+
+
+<!-- ====== END: Filterable Product List ====== -->
+
+<!-- Filter Script -->
+
+
+<!-- ====== END: Filterable Product List ====== -->
+
+    </div>
+
+</div>
+</section>
+
+    <!-- ?======================= START FOOTER ====================== -->
+<footer class="footer">
+  <div class="container-fluid px-5">
+    <div class="footer-content row gy-2">
+
+      <!-- About -->
+      <div class="footer-section col-md-5 text-center">
+        <img src="{% static 'images/ALHANAA_Logo_White.webp' %}" 
+             alt="ALHANAA Logo" 
+             class="img-fluid mb-3" 
+             style="max-width: 150px; height: auto;">
+        <p class="mx-auto" style="font-weight: normal; max-width: 400px;">
+          Al Hanaa is a trusted grower and exporter of premium fruits, producing with sustainability and traceability at the core, delivering with integrity and precision.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section col-md-2">
+        <h4>Quick Links</h4>
+        <ul class="footer-links list-unstyled">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'certificates' %}">Certificates</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section col-md-2">
+        <h4>Contact Info</h4>
+        <ul class="footer-links list-unstyled conact_info">
+          <li>
+            <a href="tel:+201093395073" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-phone me-2"></i> +201093395073
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/201093395073" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Chat
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Info@alhanaaagri.com" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-envelope me-2"></i> Info@alhanaaagri.com
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-location-dot me-2"></i> Minya, Egypt
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section col-md-2">
+        <h4>Social Media</h4>
+        <div class="d-flex gap-4 mt-3 social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100064835928360" target="_blank" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright__box mt-4">
+      <p class="copyright">
+        © Copyright-2025 <span class="fw-bold">ALHANAA</span>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
+    
+    <!--^======= JS Files ======= -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

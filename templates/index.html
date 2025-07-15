@@ -1,0 +1,737 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--^======= Favicons ======= -->
+    <link href="{% static 'images/ALHANAA_Logo_Clean.webp' %}" rel="icon">
+    <link href="{% static 'imgs/apple-touch-icon.webp' %}" rel="apple-touch-icon">
+
+    <!-- *============================= GOOGLE FONTS ============================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+    <!--^======= Vendor CSS Files ======= -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="/static/css/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!--^======= Main CSS File ======= -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>ALHANAA</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+
+    <!-- ?======================= START NAVBAR ====================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg  navbar-dark fixed-top">
+
+        <div class="container ">
+<a class="navbar-brand logo"  href="{% url 'index' %}">
+  <img id="main-logo"
+       src="{% static 'images/ALHANAA_Logo_Clean.webp' %}"
+       alt="AL HANAA Logo"
+       style="max-height: 70px;" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars nav-icon btn__menu__open"></i>
+                <i class="fa-solid fa-xmark nav-icon btn__menu__close"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item ">
+                        <a class="nav-link p-0 active" aria-current="page" href="#home">Home</a>
+                    </li>
+                                        <li class="nav-item">
+    <a class="nav-link p-0" aria-current="page"  href="{% url 'about' %}">About Us</a>
+</li>
+                    <li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'products' %}" target="_self">Products</a>
+</li>
+
+
+<li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'certificates' %}" target="_self">certificates</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'contact' %}" target="_self">Contact Us</a>
+</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.remove("transparent-navbar");
+    } else {
+      navbar.classList.add("transparent-navbar");
+    }
+  });
+</script>
+   
+<!-- ?======================= START HOME ====================== -->
+<section class="w-100 vh-100" id="home">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="content1 w-100 vh-100"></div>
+        <div class="carousel-caption d-flex justify-content-center align-items-center layer">
+          <div class="inner w-100 vh-100"></div>
+<div class="comment text-center">
+  <h1 id="hero-title" class="animated-text">AL HANAA</h1>
+  <p id="hero-subtitle" class="animated-text">For Agricultural Development</p>
+  <h5 id="hero-slogan" class="animated-slogan text-white mt-4">
+    "Rooted in Egypt, Growing for the World"
+  </h5>
+</div>
+
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="content2 w-100 vh-100"></div>
+        <div class="carousel-caption d-flex justify-content-center align-items-center layer">
+          <div class="inner w-100 vh-100"></div>
+          <div class="comment text-center">
+            <h1>AL HANAA</h1>
+  <p id="hero-subtitle" class="animated-text">For Agricultural Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ?======================= START About ====================== -->
+<section id="About" class="testimonials position-relative py-2 bg__image">
+  <div class="watermark">AL HANAA</div>
+    <div class="container position-relative" style="z-index: 1;">
+        <div class="section__title d-flex-center">
+            <!--<h3 class="position-relative text-capitalize text-center py-sm-5">About</h3>-->
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+           
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="py-2 text-center since">
+                        <!-- هنا تم إضافة الكلاس .image-fade-in لإخفاء الصورة حتى تظهر عند التمرير -->
+                        <!--<img src="{% static 'images/Logo.jpg.webp' %}" class="rounded-circle w-25 my-logo image-fade-in"
+                            alt="Testimonial Xavi Alonso Curabitur arcu erat">-->
+                        <!--<h3 class="my-3 text-black since">Founded in 2010</h3>-->
+                        <!-- هنا تم إضافة الكلاس .text-fade-in لإخفاء النصوص -->
+                        <p class="slider__text mx-auto my-text text-fade-in">
+Al Hanaa for Agricultural Development
+rooted in Egypt and growing for the world, Al Hanaa is a modern agricultural company focused on sustainable farming, premium quality, and international reach. Since 2010, we’ve specialized in cultivating fresh fruits and processed products all managed through a fully integrated supply chain. Backed by the legacy of the El Morshedy Group, we combine innovation, expertise, and environmental responsibility to deliver excellence from soil to shelf. Whether you’re a local partner or a global client, Al Hanaa is your trusted source for world-class agricultural products.                        </p>
+                        <br>
+                        <!--<p class="slider__text mx-auto my-text text-fade-in">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate amet error impedit voluptatem, dolorum optio! Eligendi natus vitae a neque nostrum, quam eos mollitia dicta asperiores accusantium quo consequuntur dolor?
+                        </p>-->
+                    </div>
+                    <div class="text-center mt-1">
+  <a href="{% url 'about' %}" class="btn btn-outline-success px-4 py-2 mb-5 fw-semibold">
+    Read More
+  </a>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ?======================= START COUNTERS ====================== -->
+
+    <!-- ?======================= START Cert ====================== -->
+
+</section>
+<section class="counters position-relative bg__image mt-2 mb-2">
+    <div class="overlay"></div>
+    <div class="container position-relative">
+        <div class="row gy-5 py-3 align-items-stretch">
+        
+            <div class="col-md-3 col-sm-6">
+                <div class="counters__card text-center d-flex flex-column h-100">
+                    <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <div class="counter-num mt-auto mb-4">
+                        <p class="fs-2 mb-1" data-target="150">0</p> 
+                        <p class="text-uppercase mb-1">WORKING EMPLOYEES</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="counters__card text-center d-flex flex-column h-100">
+                    <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="counter-num mt-auto mb-4">
+                        <p class="fs-2 mb-1" data-target="15">0</p>
+                        <p class="text-uppercase mb-1">YEARS OF EXPERIENCE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="counters__card text-center d-flex flex-column h-100">
+                    <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <div class="counter-num mt-auto mb-4">
+                        <p class="fs-2 mb-1" data-target="250000">0</p>
+                        <p class="mb-1">TONS OF EXPORTED FRESH PRODUCTS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="counters__card text-center d-flex flex-column h-100">
+                    <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div class="counter-num mt-auto mb-4">
+                        <p class="fs-2 mb-1" data-target="50">0</p>
+                        <p class="mb-1">CLIENTS</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ?======================= START Collections ====================== -->
+<!--<section id="Collection" class="works section-padding mb-5">
+    <div class="container">
+        <div class="section__title d-flex-center">
+            <h3 class="position-relative text-capitalize text-center">Collection </h3>
+        </div>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+        <div class="row g-4 my-collection">
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/orange collec.jpg' %}" alt="Orang fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#orange"><h6 class="mb-3 fw-bold">Orange</h6></a>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/mandarin collec.jpg' %}" alt="mandarin fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#mandarin"><h6 class="mb-3 fw-bold">Mandarin</h6></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/grapefruit collec.jpg' %}" alt="grapefuot fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#grapefruit"><h6 class="mb-3 fw-bold">Grapefruit</h6></a>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/grapes collec.jpg' %}" alt="Grapes fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#grapes">
+                            <h6 class="mb-3 fw-bold">Grapes</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+
+
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/medjool dates.webp' %}" alt="Dates fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#dates"><h6 class="mb-3 fw-bold">Medjool Dates</h6></a>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/barhi icon.jpg' %}" alt="Dates fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#dates"><h6 class="mb-3 fw-bold">Barhi Dates</h6></a>
+                    </div>
+                </div>
+            </div> 
+-->
+            <!--<div class="col-md-6 col-lg-4 ">
+                <div class="works__box border d-flex position-relative overflow-hidden">
+                    <figure class=" mb-0 box__image ">
+                        <img class="d-block w-100 " src="{% static 'images/olive-product.jpg' %}" alt="Olive fruit">
+                    </figure>
+                    <div class="work__overlay d-flex justify-content-center align-items-center position-absolute">
+                        <a href="{% url 'products' %}#olive"><h6 class="mb-3 fw-bold">Olive</h6></a>
+                    </div>
+                </div>
+            </div>  -->
+
+<!--
+        </div>
+    </div>
+</div>-->
+<!--
+</section>-->
+
+</head>
+<body>
+
+  <!--<h2 class="section-title">Our Products</h2>-->
+
+<!--<div class="container-fluid py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h6 class="text-primary text-uppercase">Products</h6>
+      <h1 class="display-5">Our Fresh & Organic Products</h1>
+    </div>
+    <div class="owl-carousel product-carousel">
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#pineapple">
+          <img class="img-fluid mb-3" src="{% static 'images/pineapple products.webp' %}" alt="">
+          <h6 class="mb-0">Pineapple Orange</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#fremont">
+          <img class="img-fluid mb-3" src="{% static 'images/fremont products.webp' %}" alt="">
+          <h6 class="mb-0">Fremont Mandarin</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#grapefruit">
+          <img class="img-fluid mb-3" src="{% static 'images/grapefruit products.webp' %}" alt="">
+          <h6 class="mb-0">Grapefruit</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#earlysweat">
+          <img class="img-fluid mb-3" src="{% static 'images/early products.webp' %}" alt="">
+          <h6 class="mb-0">Early Sweat Grapes</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#flame">
+          <img class="img-fluid mb-3" src="{% static 'images/flame products.webp' %}" alt="">
+          <h6 class="mb-0">Flame Grapes</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#thomson">
+          <img class="img-fluid mb-3" src="{% static 'images/thomson products.webp' %}" alt="">
+          <h6 class="mb-0">Thomson Grapes</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#medjool">
+          <img class="img-fluid mb-3" src="{% static 'images/medjool products.webp' %}" alt="">
+          <h6 class="mb-0">Medjool Dates</h6>
+        </a>
+      </div>
+      <div class="product-item text-center bg-light p-4">
+        <a href="{% url 'products' %}#barhi">
+          <img class="img-fluid mb-3" src="{% static 'images/barhi products.webp' %}" alt="">
+          <h6 class="mb-0">Barhi Dates</h6>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>-->
+\
+
+<div class="container-fluid py-5 bg-white position-relative">
+<div class="section__title text-center mb-4">
+  <h3 class="section-heading">Our Products</h3>
+</div>
+
+  <div class="container position-relative pb-5">
+
+    <div class="text-center mb-5 position-relative" style="z-index: 2;">
+      <!--<h1 class="display-5">Our Fresh & Organic Products</h1>-->
+    </div>
+
+    <div class="owl-carousel product-carousel position-relative" style="z-index: 2;">
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#pineapple">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/pineapple products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/pineapple-cut.webp' %}" alt="">
+            </div>
+            <h6>Pineapple Orange</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#fremont">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/fremont products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/fremont-cut.webp' %}" alt="">
+            </div>
+            <h6>Fremont Mandarin</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#grapefruit">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/grapefruit products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/grapefruit-cut.webp' %}" alt="">
+            </div>
+            <h6>Grapefruit</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#earlysweat">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/early products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/early-cut.webp' %}" alt="">
+            </div>
+            <h6>Early Sweat Grapes</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#flame">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/flame products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/red falme cut.webp' %}" alt="">
+            </div>
+            <h6>Flame Grapes</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#thomson">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/thomson products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/Thomson cut.webp' %}" alt="">
+            </div>
+            <h6>Thomson Grapes</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#medjool">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/medjool products.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/medjool cut.webp' %}" alt="">
+            </div>
+            <h6>Medjool Dates</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#barhi">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/barhi product.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/barhi product cut.webp' %}" alt="">
+            </div>
+            <h6>Barhi Dates</h6>
+          </a>
+        </div>
+      </div>
+
+            <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#barhi">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/Prickly pear product.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/Prickly pear product cut.webp' %}" alt="">
+            </div>
+            <h6>Prickly pear</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item-wrapper">
+        <div class="product-item">
+          <a href="{% url 'products' %}#barhi">
+            <div class="image-container">
+              <img class="default-img" src="{% static 'images/olive product.webp' %}" alt="">
+              <img class="hover-img" src="{% static 'images/olive product cut.webp' %}" alt="">
+            </div>
+            <h6>olive</h6>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- ✅ المصطبة الخضراء -->
+    <div class="green-background"></div>
+  </div>
+</div>
+
+  <script>
+   </script>
+
+
+
+
+    <!-- ?======================= START About Layer ====================== -->
+<section class="testimonials position-relative py-5 my-bg text-white">
+  <div class="container position-relative">
+    <div class="row">
+      <!-- اللاير على الشمال -->
+      <div class="col-12 col-md-5 me-auto bg-about shadow-lg p-5 mb-5 rounded"
+           style="background-color: rgba(0, 0, 0, 0.6); min-height: 400px; font-size: 1.2rem;">
+        <div class="sub-about">
+          <h2 class="text-center border-bottom pb-3 text-white">ALHANAA Farms</h2>
+
+          <div class="subabout-item d-flex flex-column align-items-start gap-4 mt-4">
+
+            <!-- Phone (ثابت) -->
+            <div class="d-flex align-items-center gap-3">
+              <i class="fa-solid fa-phone text-white fs-5"></i>
+              <span class="text-white">+201093395073</span>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="d-flex align-items-center gap-3">
+              <i class="fa-brands fa-whatsapp text-white fs-5"></i>
+              <a href="https://wa.me/201093395073" target="_blank"
+                 class="text-white text-decoration-none fw-bold transition"
+                 style="transition: all 0.3s ease;"
+                 onmouseover="this.style.color='#25D366'"
+                 onmouseout="this.style.color='white'">
+                WhatsApp Chat
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div class="d-flex align-items-center gap-3">
+              <i class="fa-solid fa-envelope text-white fs-5"></i>
+              <a href="mailto:Info@alhanaaagri.com" target="_blank"
+                 class="text-white text-decoration-none fw-bold transition"
+                 style="transition: all 0.3s ease;"
+                 onmouseover="this.style.color='#0dcaf0'"
+                 onmouseout="this.style.color='white'">
+                Info@alhanaaagri.com
+              </a>
+            </div>
+
+            <!-- Location -->
+            <div class="d-flex align-items-center gap-3">
+              <i class="fa-solid fa-location-dot text-white fs-5"></i>
+              <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank"
+                 class="text-white text-decoration-none fw-bold transition"
+                 style="transition: all 0.3s ease;"
+                 onmouseover="this.style.color='#ffc107'"
+                 onmouseout="this.style.color='white'">
+                Minya, Egypt
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- نهاية اللاير -->
+    </div>
+  </div>
+</section>
+
+    <!-- ?======================= START Map SECTION ====================== -->
+    <!-- ?======================= START FOOTER ====================== -->
+<footer class="footer">
+  <div class="container-fluid px-5">
+    <div class="footer-content row gy-2">
+
+      <!-- About -->
+      <div class="footer-section col-md-5 text-center">
+        <img src="{% static 'images/ALHANAA_Logo_White.webp' %}" 
+             alt="ALHANAA Logo" 
+             class="img-fluid mb-3" 
+             style="max-width: 150px; height: auto;">
+        <p class="mx-auto" style="font-weight: normal; max-width: 400px;">
+          Al Hanaa is a trusted grower and exporter of premium fruits, producing with sustainability and traceability at the core, delivering with integrity and precision.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section col-md-2">
+        <h4>Quick Links</h4>
+        <ul class="footer-links list-unstyled">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'certificates' %}">Certificates</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section col-md-2">
+        <h4>Contact Info</h4>
+        <ul class="footer-links list-unstyled conact_info">
+          <li>
+            <a href="tel:+201093395073" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-phone me-2"></i> +201093395073
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/201093395073" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Chat
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Info@alhanaaagri.com" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-envelope me-2"></i> Info@alhanaaagri.com
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-location-dot me-2"></i> Minya, Egypt
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section col-md-2">
+        <h4>Social Media</h4>
+        <div class="d-flex gap-4 mt-3 social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100064835928360" target="_blank" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright__box mt-4">
+      <p class="copyright">
+        © Copyright-2025 <span class="fw-bold">ALHANAA</span>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
+
+  
+    <!-- ?======================= BTN TOP ====================== -->
+    <a href="#home" id="btn-top" class="btn btn-primary rounded-circle p-0  btn__top ">
+    <i class="fa-solid fa-arrow-up position-absolute top-50 left-50 translate-middle"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+</script>
+<!-- JS المكتبات -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- تفعيل السلايدر -->
+<script>
+  $(document).ready(function(){
+    $(".product-carousel").owlCarousel({
+      autoplay: true,
+      smartSpeed: 1000,
+      margin: 25,
+      dots: false,
+      loop: true,
+      nav: true,
+      navText : [
+        '<i class="fa fa-chevron-left"></i>',
+        '<i class="fa fa-chevron-right"></i>'
+      ],
+      responsive:{
+        0:{ items:1 },
+        576:{ items:2 },
+        768:{ items:3 },
+        992:{ items:4 }
+      }
+    });
+  });
+</script>
+
+
+
+    <!--^======= JS Files ======= -->
+    <script src="/static/js/slider.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

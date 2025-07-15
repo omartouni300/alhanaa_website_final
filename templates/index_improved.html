@@ -1,0 +1,522 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الحناء للتنمية الزراعية - شركة مصرية رائدة في إنتاج وتصدير الفواكه الطازجة والمنتجات الزراعية عالية الجودة">
+    <meta name="keywords" content="الحناء, تنمية زراعية, فواكه طازجة, تصدير, مصر, برتقال, عنب, تمر">
+    <meta name="author" content="AL HANAA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AL HANAA - For Agricultural Development">
+    <meta property="og:description" content="Rooted in Egypt, Growing for the World">
+    <meta property="og:image" content="{% static 'images/ALHANAA_Logo_Clean.png' %}">
+    <meta property="og:url" content="https://alhanaaagri.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AL HANAA - For Agricultural Development">
+    <meta name="twitter:description" content="Rooted in Egypt, Growing for the World">
+    <meta name="twitter:image" content="{% static 'images/ALHANAA_Logo_Clean.png' %}">
+
+    <!--^======= Favicons ======= -->
+    <link href="{% static 'images/Logo.jpg.png' %}" rel="icon">
+    <link href="{% static 'images/Logo.jpg.png' %}" rel="apple-touch-icon">
+
+    <!-- *============================= GOOGLE FONTS ============================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+    <!--^======= Vendor CSS Files ======= -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="/static/css/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--^======= Main CSS File ======= -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>AL HANAA - For Agricultural Development | الحناء للتنمية الزراعية</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+
+    <!-- ?======================= START NAVBAR ====================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Main navigation">
+
+        <div class="container">
+            <a class="navbar-brand logo" href="{% url 'index' %}" aria-label="AL HANAA Home">
+                <img id="main-logo"
+                     src="{% static 'images/ALHANAA_Logo_Clean.png' %}"
+                     alt="AL HANAA Logo"
+                     style="max-height: 70px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars nav-icon btn__menu__open" aria-hidden="true"></i>
+                <i class="fa-solid fa-xmark nav-icon btn__menu__close" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link p-0 active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="{% url 'certificates' %}">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("nav-scrolled");
+        } else {
+          navbar.classList.remove("nav-scrolled");
+        }
+      });
+    </script>
+   
+    <!-- ?======================= START HOME ====================== -->
+    <section class="w-100 vh-100" id="home">
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel" data-bs-interval="5000" role="img" aria-label="Hero carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="content1 w-100 vh-100"></div>
+            <div class="carousel-caption d-flex justify-content-center align-items-center layer">
+              <div class="inner w-100 vh-100"></div>
+              <div class="comment text-center">
+                <h1 id="hero-title" class="animated-text">AL HANAA</h1>
+                <p id="hero-subtitle" class="animated-text">For Agricultural Development</p>
+                <h5 id="hero-slogan" class="animated-slogan text-white mt-4">
+                  "Rooted in Egypt, Growing for the World"
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="content2 w-100 vh-100"></div>
+            <div class="carousel-caption d-flex justify-content-center align-items-center layer">
+              <div class="inner w-100 vh-100"></div>
+              <div class="comment text-center">
+                <h1>AL HANAA</h1>
+                <p>For Agriculture Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ?======================= START About ====================== -->
+    <section id="About" class="testimonials position-relative py-2 bg__image">
+      <div class="watermark" aria-hidden="true">AL HANAA</div>
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="section__title d-flex-center">
+                <!--<h3 class="position-relative text-capitalize text-center py-sm-5">About</h3>-->
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+               
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="py-2 text-center since">
+                            <p class="slider__text mx-auto my-text text-fade-in">
+                                Al Hanaa for Agricultural Development
+                                rooted in Egypt and growing for the world, Al Hanaa is a modern agricultural company focused on sustainable farming, premium quality, and international reach. Since 2010, we've specialized in cultivating fresh fruits and processed products all managed through a fully integrated supply chain. Backed by the legacy of the El Morshedy Group, we combine innovation, expertise, and environmental responsibility to deliver excellence from soil to shelf. Whether you're a local partner or a global client, Al Hanaa is your trusted source for world-class agricultural products.                        
+                            </p>
+                        </div>
+                        <div class="text-center mt-1">
+                          <a href="{% url 'about' %}" class="btn btn-outline-success px-4 py-2 mb-5 fw-semibold">
+                            Read More
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ?======================= START COUNTERS ====================== -->
+    <section class="counters position-relative bg__image mt-2 mb-2">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <div class="row gy-5 py-3 align-items-stretch">
+            
+                <div class="col-md-3 col-sm-6">
+                    <div class="counters__card text-center d-flex flex-column h-100">
+                        <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter-num mt-auto mb-4">
+                            <p class="fs-2 mb-1" data-target="150">0</p> 
+                            <p class="text-uppercase mb-1">WORKING EMPLOYEES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="counters__card text-center d-flex flex-column h-100">
+                        <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter-num mt-auto mb-4">
+                            <p class="fs-2 mb-1" data-target="15">0</p>
+                            <p class="text-uppercase mb-1">YEARS OF EXPERIENCE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="counters__card text-center d-flex flex-column h-100">
+                        <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                            <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter-num mt-auto mb-4">
+                            <p class="fs-2 mb-1" data-target="250000">0</p>
+                            <p class="mb-1">TONS OF EXPORTED FRESH PRODUCTS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="counters__card text-center d-flex flex-column h-100">
+                        <div class="card__icon rounded-circle d-flex justify-content-center align-items-center mx-auto mt-4 mb-2">
+                            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter-num mt-auto mb-4">
+                            <p class="fs-2 mb-1" data-target="50">0</p>
+                            <p class="mb-1">CLIENTS</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ?======================= START CERTIFICATES ====================== -->
+    <div class="container my-5 py-3">
+      <div class="section__title text-center mb-4">
+        <h3 class="section-heading">Certificates</h3>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- عنصر الشهادة -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+          <div class="certificate-box">
+            <img src="{% static 'images/2.png' %}" alt="Certificate 2" class="img-fluid">
+          </div>
+        </div>
+        
+        <!-- باقي العناصر -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+          <div class="certificate-box">
+            <img src="{% static 'images/3.png' %}" alt="Certificate 3" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+          <div class="certificate-box">
+            <img src="{% static 'images/4.png' %}" alt="Certificate 4" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+          <div class="certificate-box">
+            <img src="{% static 'images/5.png' %}" alt="Certificate 5" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+          <div class="certificate-box">
+            <img src="{% static 'images/6.png' %}" alt="Certificate 6" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ?======================= START PRODUCTS SLIDER ====================== -->
+    <section class="fruit-slider-section my-5 py-4">
+      <div class="container">
+        <!-- العنوان -->
+        <div class="section__title d-flex-center mb-4">
+          <h3 class="section-heading text-center">Our Products</h3>
+        </div>
+
+        <!-- السلايدر -->
+        <div id="slider" class="product-slider">
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#pineapple">
+              <img src="/static/images/pineapple products.png" alt="Pineapple Orange">
+              <p class="product-name mt-2">Pineapple Orange</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#fremont">
+              <img src="/static/images/mandarin collec.jpg" alt="Fremont Mandarin">
+              <p class="product-name mt-2">Fremont Mandarin</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#grapefruit">
+              <img src="/static/images/grapefruit products.png" alt="Grapefruit">
+              <p class="product-name mt-2">Grapefruit</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#earlysweat">
+              <img src="/static/images/early products.png" alt="Early Sweat Grapes">
+              <p class="product-name mt-2">Early Sweat Grapes</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#flame">
+              <img src="/static/images/flame products.png" alt="Flame Grapes">
+              <p class="product-name mt-2">Flame Grapes</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#thomson">
+              <img src="/static/images/thomson products.png" alt="Thomson Grapes">
+              <p class="product-name mt-2">Thomson Grapes</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#medjool">
+              <img src="/static/images/medjool products.png" alt="Medjool Dates">
+              <p class="product-name mt-2">Medjool Dates</p>
+            </a>
+          </div>
+
+          <div class="product-slide text-center">
+            <a href="{% url 'products' %}#barhi">
+              <img src="/static/images/barhi products.png" alt="Barhi Dates">
+              <p class="product-name mt-2">Barhi Dates</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ?======================= START About Layer ====================== -->
+    <section class="testimonials position-relative py-5 my-bg text-white">
+      <div class="container position-relative">
+        <div class="row">
+          <!-- اللاير على الشمال -->
+          <div class="col-12 col-md-5 me-auto bg-about shadow-lg p-5 mb-5 rounded"
+               style="background-color: rgba(0, 0, 0, 0.6); min-height: 400px; font-size: 1.2rem;">
+            <div class="sub-about">
+              <h2 class="text-center border-bottom pb-3 text-white">ALHANAA Farms</h2>
+
+              <div class="subabout-item d-flex flex-column align-items-start gap-4 mt-4">
+
+                <!-- Phone (ثابت) -->
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fa-solid fa-phone text-white fs-5" aria-hidden="true"></i>
+                  <span class="text-white">+201093395073</span>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fa-brands fa-whatsapp text-white fs-5" aria-hidden="true"></i>
+                  <a href="https://wa.me/201093395073" target="_blank"
+                     class="text-white text-decoration-none fw-bold transition"
+                     style="transition: all 0.3s ease;"
+                     onmouseover="this.style.color='#25D366'"
+                     onmouseout="this.style.color='white'">
+                    WhatsApp Chat
+                  </a>
+                </div>
+
+                <!-- Email -->
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fa-solid fa-envelope text-white fs-5" aria-hidden="true"></i>
+                  <a href="mailto:Info@alhanaaagri.com" target="_blank"
+                     class="text-white text-decoration-none fw-bold transition"
+                     style="transition: all 0.3s ease;"
+                     onmouseover="this.style.color='#0dcaf0'"
+                     onmouseout="this.style.color='white'">
+                    Info@alhanaaagri.com
+                  </a>
+                </div>
+
+                <!-- Location -->
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fa-solid fa-location-dot text-white fs-5" aria-hidden="true"></i>
+                  <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank"
+                     class="text-white text-decoration-none fw-bold transition"
+                     style="transition: all 0.3s ease;"
+                     onmouseover="this.style.color='#ffc107'"
+                     onmouseout="this.style.color='white'">
+                    Minya, Egypt
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- نهاية اللاير -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ?======================= START Map SECTION ====================== -->
+     <section class="video-section py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <!-- اليسار: رابط GPS -->
+          <div class="col-md-6 animate__animated animate__fadeInLeft">
+            <h3 class="mb-3 text-uppercase fw-bold">Explore Our Location</h3>
+            <a href="https://www.google.com/maps?..." target="_blank" class="btn btn-success px-4 py-2">
+              GPS <i class="fa-solid fa-arrow-up-right-from-square ms-2" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- اليمين: الصورة -->
+          <div class="col-md-6">
+            <div class="ratio ratio-4x3 rounded overflow-hidden">
+              <img src="{% static 'images/Alhanaa Map.png' %}" alt="Our Location Map">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ?======================= START FOOTER ====================== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container-fluid px-5">
+        <div class="footer-content row gy-2">
+
+          <!-- About -->
+          <div class="footer-section col-md-5 text-center">
+            <img src="{% static 'images/ALHANAA_Logo_White.png' %}" 
+                 alt="ALHANAA Logo" 
+                 class="img-fluid mb-3" 
+                 style="max-width: 150px; height: auto;">
+            <p class="mx-auto" style="font-weight: normal; max-width: 400px;">
+              Al Hanaa is a trusted grower and exporter of premium fruits, producing with sustainability and traceability at the core, delivering with integrity and precision.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section col-md-2">
+            <h4>Quick Links</h4>
+            <ul class="footer-links list-unstyled">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'products' %}">Products</a></li>
+              <li><a href="{% url 'certificates' %}">Certificates</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section col-md-2">
+            <h4>Contact Info</h4>
+            <ul class="footer-links list-unstyled conact_info">
+              <li>
+                <a href="tel:+201093395073" class="text-white text-decoration-none d-flex align-items-center">
+                  <i class="fa-solid fa-phone me-2" aria-hidden="true"></i> +201093395073
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/201093395073" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+                  <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i> WhatsApp Chat
+                </a>
+              </li>
+              <li>
+                <a href="mailto:Info@alhanaaagri.com" class="text-white text-decoration-none d-flex align-items-center">
+                  <i class="fa-solid fa-envelope me-2" aria-hidden="true"></i> Info@alhanaaagri.com
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+                  <i class="fa-solid fa-location-dot me-2" aria-hidden="true"></i> Minya, Egypt
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-section col-md-2">
+            <h4>Social Media</h4>
+            <div class="d-flex gap-4 mt-3 social-icons">
+              <a href="https://www.facebook.com/profile.php?id=100064835928360" target="_blank" class="text-white text-decoration-none social-icon" aria-label="Facebook">
+                <i class="fa-brands fa-facebook fa-2x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white text-decoration-none social-icon" aria-label="Twitter">
+                <i class="fa-brands fa-twitter fa-2x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white text-decoration-none social-icon" aria-label="Instagram">
+                <i class="fa-brands fa-instagram fa-2x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="text-white text-decoration-none social-icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="copyright__box mt-4">
+          <p class="copyright">
+            © Copyright-2025 <span class="fw-bold">ALHANAA</span>. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+      
+    <!-- ?======================= BTN TOP ====================== -->
+    <a href="#home" id="btn-top" class="btn btn-primary rounded-circle p-0 btn__top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up position-absolute top-50 left-50 translate-middle" aria-hidden="true"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!--^======= JS Files ======= -->
+    <script src="/static/js/slider.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

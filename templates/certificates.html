@@ -1,0 +1,349 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates - ALHANAA</title>
+
+  <link href="{% static 'images/Logo.jpg.webp' %}" rel="icon" />
+  <link href="{% static 'imgs/apple-touch-icon.webp' %}" rel="apple-touch-icon" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves/dist/waves.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/node-waves/dist/waves.min.js"></script>
+
+<style>
+  .certificates-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+  }
+
+  .certificates-section h2 {
+    font-size: 3.2rem; /* أكبر من 2.5rem */
+    font-weight: 700;
+    color: #3A986C;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 360px; /* بدل 300px */
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover {
+    box-shadow: 0 0 20px rgba(58, 152, 108, 0.3);
+  }
+
+  .flip-card-front img {
+    max-width: 140px; /* بدل 100px */
+    transition: filter 0.4s ease;
+  }
+
+  .flip-card:hover img {
+    filter: drop-shadow(0 0 5px #3A986C);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  }
+
+  .flip-card-front {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-card-back {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    padding: 30px;
+    text-align: center;
+  }
+
+  .flip-card-back h5 {
+    font-weight: bold;
+    font-size: 1.5rem; /* أكبر */
+    color: #222;
+    margin-bottom: 12px;
+  }
+
+  .flip-card-back p {
+    font-size: 1.1rem; /* أكبر من 0.95rem */
+    color: #555;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    html {
+      overflow-x: hidden;
+    }
+
+    .navbar .nav-link.active {
+      color: #3A986C !important;
+    }
+
+    .flip-card-inner.flip-now {
+      transform: rotateY(180deg);
+    }
+
+    .certificates-section h2 {
+      font-size: 2.4rem; /* تصغير شوية للموبايل */
+    }
+
+    .flip-card {
+      height: 320px;
+    }
+
+    .flip-card-front img {
+      max-width: 120px;
+    }
+
+    .flip-card-back h5 {
+      font-size: 1.3rem;
+    }
+
+    .flip-card-back p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand logo" href="{% url 'index' %}">
+      <img id="main-logo" src="{% static 'images/ALHANAA_Logo_Clean.webp' %}" alt="AL HANAA Logo" style="max-height: 70px;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars nav-icon btn__menu__open"></i>
+      <i class="fa-solid fa-xmark nav-icon btn__menu__close"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+        <li class="nav-item"><a class="nav-link p-0" href="{% url 'index' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link p-0" href="{% url 'about' %}">About Us</a></li>
+        <li class="nav-item"><a class="nav-link p-0" href="{% url 'products' %}">Products</a></li>
+        <li class="nav-item"><a class="nav-link p-0 active" href="{% url 'certificates' %}">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link p-0" href="{% url 'contact' %}">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.remove("transparent-navbar");
+    } else {
+      navbar.classList.add("transparent-navbar");
+    }
+  });
+</script>
+
+<!-- Banner -->
+<div class="bgOfPage d-flex align-items-center justify-content-center">
+  <h2>Certificates</h2>
+</div>
+
+<!-- Certificates Flip Cards -->
+<section class="certificates-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Certificates</h2>
+    <div class="row gy-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/2.webp' %}" alt="Global GAP" style="max-width: 100px;">
+            </div>
+            <div class="flip-card-back">
+              <h5>GlobalG.A.P.</h5>
+              <p>Promotes safe and sustainable agricultural production, focusing on food safety, environmental care, and worker health.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="75">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/3.webp' %}" alt="ISO 45001" style="max-width: 100px;">
+            </div>
+            <div class="flip-card-back">
+              <h5>ISO 45001</h5>
+              <p>A global standard for workplace health and safety, helping reduce risks and enhance employee well-being.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/4.webp' %}" alt="ISO 50001" style="max-width: 100px;">
+            </div>
+            <div class="flip-card-back">
+              <h5>ISO 50001</h5>
+              <p>Energy management standard helping reduce energy consumption and environmental impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="150">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/5.webp' %}" alt="ISO 9001" style="max-width: 100px;">
+            </div>
+            <div class="flip-card-back">
+              <h5>ISO 9001</h5>
+              <p>The most widely recognized quality standard for improving consistency, efficiency, and customer satisfaction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/6.webp' %}" alt="ISO 14001" style="max-width: 100px;">
+            </div>
+            <div class="flip-card-back">
+              <h5>ISO 14001</h5>
+              <p>Environmental management system designed to help organizations reduce their environmental footprint and operate sustainably.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="250">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/7.webp' %}" alt="BRCGS" style="max-width: 100px;">
+            </div>
+            <div class="flip-card-back">
+              <h5>BRCGS</h5>
+              <p>Ensures food products meet the highest standards in hygiene, traceability, safety, and quality assurance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container-fluid px-5">
+    <div class="footer-content row gy-2">
+      <div class="footer-section col-md-5 text-center">
+        <img src="{% static 'images/ALHANAA_Logo_White.webp' %}" alt="ALHANAA Logo" class="img-fluid mb-3" style="max-width: 150px;">
+        <p class="mx-auto" style="font-weight: normal; max-width: 400px;">
+          Al Hanaa is a trusted grower and exporter of premium fruits, producing with sustainability and traceability at the core, delivering with integrity and precision.
+        </p>
+      </div>
+      <div class="footer-section col-md-2">
+        <h4>Quick Links</h4>
+        <ul class="footer-links list-unstyled">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'certificates' %}">Certificates</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section col-md-2">
+        <h4>Contact Info</h4>
+        <ul class="footer-links list-unstyled conact_info">
+          <li><a href="tel:+201093395073" class="text-white text-decoration-none d-flex align-items-center"><i class="fa-solid fa-phone me-2"></i> +201093395073</a></li>
+          <li><a href="https://wa.me/201093395073" target="_blank" class="text-white text-decoration-none d-flex align-items-center"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Chat</a></li>
+          <li><a href="mailto:Info@alhanaaagri.com" class="text-white text-decoration-none d-flex align-items-center"><i class="fa-solid fa-envelope me-2"></i> Info@alhanaaagri.com</a></li>
+          <li><a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank" class="text-white text-decoration-none d-flex align-items-center"><i class="fa-solid fa-location-dot me-2"></i> Minya, Egypt</a></li>
+        </ul>
+      </div>
+      <div class="footer-section col-md-2">
+        <h4>Social Media</h4>
+        <div class="d-flex gap-4 mt-3 social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100064835928360" target="_blank" class="text-white text-decoration-none social-icon"><i class="fa-brands fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-white text-decoration-none social-icon"><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a href="#" class="text-white text-decoration-none social-icon"><i class="fa-brands fa-instagram fa-2x"></i></a>
+          <a href="#" class="text-white text-decoration-none social-icon"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright__box mt-4">
+      <p class="copyright">
+        © Copyright-2025 <span class="fw-bold">ALHANAA</span>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1600,
+    easing: 'ease-in-out'
+  });
+
+  // Waves setup
+  document.addEventListener("DOMContentLoaded", function () {
+    Waves.attach('.flip-card', ['waves-light']);
+    Waves.init();
+  });
+</script>
+
+
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

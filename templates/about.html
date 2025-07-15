@@ -1,0 +1,329 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--^======= Favicons ======= -->
+<link href="{% static 'images/Logo.jpg.png' %}" rel="icon" />
+<link href="{% static 'imgs/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+<!-- *============================= GOOGLE FONTS ============================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--^======= Vendor CSS Files ======= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!--^======= Main CSS File ======= -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <title>About-ALHANAA</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+    <!-- ?======================= START NAVBAR ====================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg  navbar-dark fixed-top">
+
+        <div class="container ">
+<a class="navbar-brand logo"  href="{% url 'index' %}">
+  <img id="main-logo"
+       src="{% static 'images/ALHANAA_Logo_Clean.png' %}"
+       alt="AL HANAA Logo"
+       style="max-height: 70px;" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars nav-icon btn__menu__open"></i>
+                <i class="fa-solid fa-xmark nav-icon btn__menu__close"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item ">
+    <a class="nav-link p-0" href="{% url 'index' %}" target="_self">Home</a>
+                    </li>
+                                        <li class="nav-item">
+    <a class="nav-link p-0 active" aria-current="page"  href="{% url 'about' %}">About Us</a>
+</li>
+                    <li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'products' %}" target="_self">Products</a>
+</li>
+
+
+<li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'certificates' %}" target="_self">certificates</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link p-0" href="{% url 'contact' %}" target="_self">Contact Us</a>
+</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<script>
+ 
+</script>   
+  <!-- ?======================= START About Header ====================== -->
+    <div class="bgOfPage  d-flex align-items-center justify-content-center">
+     <h2>About Us</h2> 
+   </div> 
+
+  <!-- ?======================= START About Content ====================== -->
+  <!-- OUR STORY - Full Width -->
+  <section class="about-story py-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10">
+          <div class="text-center mb-4">
+            <h3 class="about-title">
+              <i class="fa-solid fa-leaf me-2 text-success"></i>Our Story
+            </h3>
+          </div>
+          <p class="lead text-center">
+            Founded in 2010, Al Hanaa for Agricultural Development is a pioneering force in Egypt’s agricultural sector.
+            Strategically located at Kilometer 132 on the Asyut Western Desert Road, our operations benefit from fertile
+            lands and ideal growing conditions that enable year-round cultivation and sustainable growth.
+            <br><br>
+            We are proud to be part of the El Morshedy Group, a trusted name with over four decades of experience across
+            multiple industries including commodity trading and flour milling.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h3 class="about-title">
+            <i class="fa-solid fa-seedling me-2 text-success"></i>What We Do
+          </h3>
+          <p>We specialize in cultivating premium fruits and seasonal crops while expanding into value-added products
+            like pickled olives and raisin grapes. Our integrated model ensures full traceability and quality.</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <img src="{% static 'images/tractor about.webp' %}" alt="What We Do" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION & MISSION -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6" data-aos="zoom-in">
+          <h3 class="about-title">
+            <i class="fa-solid fa-eye me-2 text-success"></i>Our Vision
+          </h3>
+          <p>To become a leading provider of top-tier agricultural products for domestic and global markets,
+            responsibly grown and tailored to client needs.</p>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="about-title">
+            <i class="fa-solid fa-bullseye me-2 text-success"></i>Our Mission
+          </h3>
+          <p>To deliver high-quality, sustainably cultivated products while exceeding customer expectations through
+            innovation and integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <h3 class="about-title text-center">
+            <i class="fa-solid fa-handshake-angle me-2 text-success"></i>Our Core Values
+          </h3>
+          <ul class="mt-4 list-unstyled fs-5">
+            <li><i class="fa-solid fa-check text-success me-2"></i><strong>Integrity:</strong> Honesty, fairness, and responsibility in all operations.</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i><strong>Sustainability:</strong> Commitment to protecting natural resources.</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i><strong>Creativity:</strong> Encouraging innovation in agriculture.</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i><strong>Technology:</strong> Using modern tools to boost productivity.</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i><strong>Teamwork:</strong> Collaboration and shared goals for success.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h3 class="about-title">
+            <i class="fa-solid fa-star me-2 text-success"></i>Why Choose Us?
+          </h3>
+          <p>With over a decade of hands-on experience, international reach, and advanced systems like SAP, we ensure
+            global compliance, consistency, and quality in all we deliver.</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <img src="{% static 'images/grapes about.webp' %}" alt="Why Choose Us" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL OUTLOOK -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h3 class="about-title">
+            <i class="fa-solid fa-globe me-2 text-success"></i>Our Global Outlook
+          </h3>
+          <p>Rooted in Egypt and reaching the world, we continue to grow through innovation and dedication to
+            sustainability. With Al Hanaa, you're part of a vision shaping the future of food.</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <img src="{% static 'images/solar about.webp' %}" alt="Global Outlook" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION SECTION -->
+  <section class="video-section py-5 bg-light">
+    <div class="container">
+<div class="row align-items-center gy-5">
+  <!-- الصورة -->
+  <div class="col-md-6 mb-4 mb-md-0">
+    <div class="ratio ratio-4x3 rounded overflow-hidden">
+      <img src="{% static 'images/Alhanaa Map.webp' %}" alt="Our Location" class="img-fluid w-100 h-100 object-fit-cover">
+    </div>
+  </div>
+
+  <!-- النص والزر -->
+  <div class="col-md-6 animate__animated animate__fadeInLeft mt-4 mt-md-0">
+    <h3 class="mb-3 text-uppercase fw-bold">
+      <i class="fa-solid fa-location-dot me-2 text-success"></i>Explore Our Location
+    </h3>
+    <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank" class="btn btn-success px-4 py-2">
+      GPS <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+    </a>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+    <!-- ?======================= START FOOTER ====================== -->
+<footer class="footer">
+  <div class="container-fluid px-5">
+    <div class="footer-content row gy-2">
+
+      <!-- About -->
+      <div class="footer-section col-md-5 text-center">
+        <img src="{% static 'images/ALHANAA_Logo_White.png' %}" 
+             alt="ALHANAA Logo" 
+             class="img-fluid mb-3" 
+             style="max-width: 150px; height: auto;">
+        <p class="mx-auto" style="font-weight: normal; max-width: 400px;">
+          Al Hanaa is a trusted grower and exporter of premium fruits, producing with sustainability and traceability at the core, delivering with integrity and precision.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section col-md-2">
+        <h4>Quick Links</h4>
+        <ul class="footer-links list-unstyled">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'certificates' %}">Certificates</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section col-md-2">
+        <h4>Contact Info</h4>
+        <ul class="footer-links list-unstyled conact_info">
+          <li>
+            <a href="tel:+201093395073" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-phone me-2"></i> +201093395073
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/201093395073" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Chat
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Info@alhanaaagri.com" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-envelope me-2"></i> Info@alhanaaagri.com
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/g2a63GK9aP1Vudve9?g_st=iw" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <i class="fa-solid fa-location-dot me-2"></i> Minya, Egypt
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section col-md-2">
+        <h4>Social Media</h4>
+        <div class="d-flex gap-4 mt-3 social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100064835928360" target="_blank" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none social-icon">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright__box mt-4">
+      <p class="copyright">
+        © Copyright-2025 <span class="fw-bold">ALHANAA</span>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
+    <!-- ?======================= BTN TOP ====================== -->
+    <a href="#" id="btn-top" class="btn btn-primary rounded-circle p-0  btn__top ">
+    <i class="fa-solid fa-arrow-up position-absolute top-50 left-50 translate-middle"></i>
+    </a>
+
+  <!-- JavaScript Files -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script>
+    // Initialize AOS animation library
+    AOS.init();
+    
+   
+  </script>
+  </body>
+</html>
+
